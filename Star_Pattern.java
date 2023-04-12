@@ -32,7 +32,7 @@ output:
 		}
 
 
-		System.out.println("\npattern-2\n");
+	       System.out.println("\npattern-2\n");
 
 		/* 
 output:
