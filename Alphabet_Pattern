@@ -1,1 +1,736 @@
 
+package Pattern;
+
+public class Alphabet_Pattern {
+
+	public static void main(String[] args) 
+	{
+		//1
+		
+		
+System.out.println("\npattern-1\n");
+		
+		/*
+A    
+AB   
+ABC  
+ABCD 
+ABCDE
+		 */
+
+		for(int i=0; i<5; i++)
+		{
+			for(int j=0; j<5; j++)
+			{
+				if(j-i<=0)
+					System.out.print((char)(j+65));
+				else
+					System.out.print(" ");
+
+			}
+			System.out.println();
+
+		}
+System.out.println("\npattern-2\n");
+		
+		/*
+A    
+BB   
+CCC  
+DDDD 
+EEEEE
+		 */
+
+		for(int i=0; i<5; i++)
+		{
+			for(int j=0; j<5; j++)
+			{
+				if(j-i<=0)
+					System.out.print((char)(i+65));
+				else
+					System.out.print(" ");
+
+			}
+			System.out.println();
+
+		}
+		
+		System.out.println("\npattern-3\n");
+		/*
+ABCDE
+BCDE 
+CDE  
+DE   
+E  
+
+		 */
+
+		for(int i=0; i<5; i++)
+		{
+			
+			for(int j=0; j<5; j++)
+			{
+				if(j+i<=4)
+					System.out.print((char)(j+i+65));
+				else
+				     System.out.print(" ");
+			}
+		 System.out.println();
+		}
+		
+		System.out.println("\npattern-4\n");
+		/*
+F     
+FE    
+FED   
+FEDC  
+FEDCB 
+FEDCBA
+
+		 */
+
+		for(int i=0; i<6; i++)
+		{
+			
+			for(int j=0; j<6; j++)
+			{
+				if(j-i<=0)
+					System.out.print((char)(70-j));
+				else
+				    System.out.print(" ");
+			
+			}
+		 System.out.println();
+		}
+		
+		System.out.println("\npattern-5\n");
+		/*
+F     
+EF    
+DEF   
+CDEF  
+BCDEF 
+ABCDEF
+
+		 */
+
+		for(int i=0; i<6; i++)
+		{
+			
+			for(int j=0; j<6; j++)
+			{
+				if(j-i<=0)
+					System.out.print((char)(70+(j-i)));
+				else
+				    System.out.print(" ");
+			
+			}
+		 System.out.println();
+		}
+		
+		
+		
+		System.out.println("\npattern-6\n");
+		/*
+A    
+BA   
+CBA  
+DCBA 
+EDCBA
+
+		 */
+
+		
+		for(int i=0; i<5; i++)
+		{
+			
+			for(int j=0; j<5; j++)
+			{
+				if(j-i<=0)
+				 System.out.print((char)(65-(j-i)));
+				else
+					System.out.print(" ");
+				
+			}
+			
+		 System.out.println();
+		}
+		
+		
+		System.out.println("\npattern-7\n");
+		/*
+A    
+BC   
+CDE  
+DEFG 
+EFGHI
+
+		 */
+
+		int cnt1=0;
+		for(int i=0; i<5; i++)
+		{
+			int cnt2=cnt1;
+			for(int j=0; j<5; j++)
+			{
+				if(j-i<=0)
+				{
+					System.out.print((char)(cnt2+65));
+				   cnt2++;
+				}
+				else
+				{
+					System.out.print(" ");
+				}
+				
+			}
+			cnt1++;
+		 System.out.println();
+		}
+		
+		
+		
+		
+		System.out.println("\npattern-8\n");
+		/*
+ABCDE
+ ABCD
+  ABC
+   AB
+    A
+   AB
+  ABC
+ ABCD
+ABCDE
+
+
+		 */
+		for(int i=0; i<9; i++)
+		{
+			for(int j=0; j<5; j++)
+			{
+				if(j-i>=0 && i<=4)
+					System.out.print((char)(j-i+65));
+				else if(j+i>=8 && i>=4)
+				System.out.print((char)(j+i-7+64));
+				else
+				System.out.print(" ");
+					
+			}
+			System.out.println();
+		}
+		
+		
+		System.out.println("\npattern-9\n");
+		/*
+ABCDE
+ABCD 
+ABC  
+AB   
+A    
+AB   
+ABC  
+ABCD 
+ABCDE
+
+		 */
+		for(int i=0; i<9; i++)
+		{
+			for(int j=0; j<5; j++)
+			{
+				if(j+i<=4 || j-i<=-4)
+					System.out.print((char)(j+65));
+				else
+					System.out.print(" ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("\npattern-10\n");
+		/*
+
+ABCDEF
+BCDEF 
+CDEF  
+DEF   
+EF    
+F     
+F     
+EF    
+DEF   
+CDEF  
+BCDEF 
+ABCDEF
+
+		 */
+		for(int i=0; i<12; i++)
+		{
+			for(int j=0; j<6; j++)
+			{
+				if(j+i<=5 || j-i<=-6)
+				{
+					if(i<=5)
+					System.out.print((char)(j+i+65));
+					else
+						System.out.print((char)((j-i)+11+65));
+					
+				}
+				else
+					System.out.print(" ");
+			}
+			System.out.println();
+		}
+		
+		
+		
+		System.out.println("\npattern-11\n");
+		/*
+A    
+AB   
+ABC  
+ABCD 
+ABCDE
+ABCD 
+ABC  
+AB   
+A  
+
+		 */
+		for(int i=0; i<9; i++)
+		{
+			for(int j=0; j<5; j++)
+			{
+				if(j+i<=8 && j-i<=-0)
+					System.out.print((char)(j+65));
+				else
+					System.out.print(" ");
+
+			}
+			System.out.println();
+
+		}
+		
+		System.out.println("\npattern-12\n");
+		/*
+A    
+BB   
+CCC  
+DDDD 
+EEEEE
+DDDD 
+CCC  
+BB   
+A   
+
+		 */
+		for(int i=0; i<9; i++)
+		{
+			for(int j=0; j<5; j++)
+			{
+				if(j+i<=8 && j-i<=-0)
+				{
+					if(i<=4)
+					System.out.print((char)(i+65));
+					else
+						System.out.print((char)(73-i));
+					
+				}
+				else
+					System.out.print(" ");
+
+			}
+			System.out.println();
+
+		}
+
+
+		
+
+		System.out.println("\npattern-13\n");
+		/*
+        A
+       AB
+      ABC
+     ABCD
+    ABCDE
+   ABCDEF
+  ABCDEFG
+ ABCDEFGH
+ABCDEFGHI
+
+		 */
+		for(int i=0; i<9; i++)
+		{
+			for(int j=0; j<9; j++)
+			{
+				if(j+i>=8)
+					System.out.print((char)(j+i-7+64));
+				else
+					System.out.print(" ");
+
+			}
+			System.out.println();
+		}
+		
+		System.out.println("\npattern-14\n");
+		/*
+A        A
+AB      AB
+ABC    ABC
+ABCD  ABCD
+ABCDEABCDE
+
+
+		 */
+		for(int i=0; i<5; i++)
+		{
+			for(int j=0; j<10; j++)
+			{
+				if(j-i<=0 || j+i>=9)
+				{
+					if(j<=4)
+					System.out.print((char)(j+65));
+					else
+					System.out.print((char)((j+i)-8+64));
+				}
+				else
+					System.out.print(" ");
+			}
+			
+		 System.out.println();
+		}
+		
+		
+
+		System.out.println("\npattern-15\n");
+		/*
+
+A      
+B G     
+C H M    
+D I N S   
+E J O T Y  
+F K P U Z _ 
+
+		 */
+		int num=1;
+		for(int i=0; i<6; i++)
+		{
+			int D =5;
+			int num2=num;
+			for(int j=0; j<6; j++)
+			{
+				if(j-i<=0)
+				
+					System.out.print((char)(num2+64)+" ");
+					
+				else
+					System.out.print(" ");
+				num2=num2+D;	
+			}
+			num++;
+		 System.out.println();
+		}
+		
+		
+		System.out.println("\npattern-16\n");
+		/*
+    A    
+   ABA   
+  ABCBA  
+ ABCDCBA 
+ABCDEDCBA
+
+		 */
+		int cnt4=1;
+		
+		for(int i=0; i<5; i++)
+		{
+			int cnt=cnt4;
+			for(int j=0; j<9; j++)
+			{
+				if(j+i>=4 && j-i<=4)
+				{
+					System.out.print((char)(cnt+64));
+					if(j<4)
+						cnt++;
+					else
+						cnt--;
+				}
+				
+				else
+					System.out.print(" ");
+			}
+			
+		 System.out.println();
+		}
+		
+		
+		System.out.println("\npattern-17\n");
+		/*
+A        
+ABA      
+ABCBA    
+ABCDCBA  
+ABCDEDCBA
+
+		 */
+		int mid=0;
+		
+		for(int i=0; i<9; i=i+2)
+		{
+			int cnt=0;
+			for(int j=0; j<9; j++)
+			{
+				if(j-i<=0)
+				{
+					if(j<mid)
+					System.out.print((char)(cnt++ + 65));
+					else
+						System.out.print((char)(cnt-- + 65));
+				}
+				else
+					System.out.print(" ");
+			}
+			mid++;
+		 System.out.println();
+		}
+		
+		System.out.println("\npattern-18\n");
+		/*
+A        
+ABA      
+ABCBA    
+ABCDCBA  
+ABCDEDCBA
+		 */
+		for(int i=0; i<9; i=i+2)
+		{
+		int cnt=1;
+			for(int j=0; j<9; j++)
+			{
+				if(j-i<=0)
+				{
+					System.out.print((char)(cnt+64));                 
+					if(j*2<i) 
+						cnt++;
+					else
+						cnt--;
+					               
+				}
+				else
+					System.out.print(" ");
+			}
+			
+		 System.out.println();
+		}
+		
+		System.out.println("\npattern-19\n");
+		/*
+OXXXX
+XOXXX
+XXOXX
+XXXOX
+XXXXO
+	 */
+
+		for(int i=0; i<5; i++)
+		{
+			
+			for(int j=0; j<5; j++)
+			{
+					if((j-i)==0)
+					 System.out.print('O');
+					else
+					 System.out.print('X');
+			}
+			
+		 System.out.println();
+		}
+		
+		System.out.println("\npattern-20\n");
+/* 
+output:
+
+		
+A   A
+ A A 
+  A  
+ A A 
+A   A
+		
+
+	 
+	*/
+		
+		for(int i=0; i<5; i++)
+		{
+
+			for(int j=0; j<5; j++)
+			{
+				if(j+i==4 || j-i==0)
+
+					System.out.print('A');
+
+				else
+					System.out.print(" ");
+			}
+
+			System.out.println();
+
+		}
+		
+		System.out.println("\npattern-21\n");
+		/* 
+		output:
+
+				
+ABBBA
+BABAB
+BBABB
+BABAB
+ABBBA
+			*/
+				
+				for(int i=0; i<5; i++)
+				{
+
+					for(int j=0; j<5; j++)
+					{
+						if(j+i==4 || j-i==0)
+
+							System.out.print('A');
+
+						else
+							System.out.print('B');
+					}
+
+					System.out.println();
+
+				}	
+				System.out.println("\npattern-22\n");
+				/*
+				 output:
+PPPPP
+P   P
+P   P
+P   P
+PPPPP
+
+				 */
+				for(int i=0; i<5; i++)
+				{
+				int cnt=1;
+					for(int j=0; j<5; j++)
+					{
+						if(i==0 || i==4 || j==4 || j==0)
+							System.out.print('P');  
+						else
+							System.out.print(" ");
+					}
+					
+				 System.out.println();
+				}		
+				System.out.println("\npattern-23\n");
+				/*
+				 output:
+
+PPPPP
+PQQQP
+PQQQP
+PQQQP
+PPPPP
+
+				 */
+				for(int i=0; i<5; i++)
+				{
+				int cnt=1;
+					for(int j=0; j<5; j++)
+					{
+						if(i==0 || i==4 || j==4 || j==0)
+							System.out.print('P');  
+						else
+							System.out.print('Q');
+					}
+					
+				 System.out.println();
+				}
+				
+				System.out.println("\npattern-24\n");
+				/*
+				 output:
+
+    N
+   N 
+  N  
+ N   
+N 
+				 */
+				for(int i=0; i<5; i++)
+				{
+				int cnt=1;
+					for(int j=0; j<5; j++)
+					{
+						if(j+i==4)
+							System.out.print('N');  
+						else
+							System.out.print(" ");
+					}
+					
+				 System.out.println();
+				}
+				
+				System.out.println("\npattern-25\n");
+				/*
+				 output:
+
+
+N    
+ N   
+  N  
+   N 
+    N
+				 */
+				for(int i=0; i<5; i++)
+				{
+				int cnt=1;
+					for(int j=0; j<5; j++)
+					{
+						if(j-i==0)
+							System.out.print('N');  
+						else
+							System.out.print(" ");
+					}
+					
+				 System.out.println();
+				}
+				
+				System.out.println("\npattern-26\n");
+				/*
+				 output:
+
+
+N    
+ N   
+  N  
+   N 
+    N
+				 */
+				for(int i=0; i<5; i++)
+				{
+				int cnt=1;
+					for(int j=0; j<9; j++)
+					{
+						if(j-i==0 || j+i==8)
+							System.out.print('N');  
+						else
+							System.out.print(" ");
+					}
+					
+				 System.out.println();
+				}
+			
+		
+	}
+
+}
